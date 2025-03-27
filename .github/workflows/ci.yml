@@ -1,0 +1,25 @@
+name: Deploy Portfolio
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+      - name: Cache pip packages
+        uses: actions/cache@v3
+        with:
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          path: ~/.cache/pip
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy --force
+```[[6](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAQXblrz3q3EVPbddl-b2SpoUnoNAfiCoqtHBKLnrg81tGJImLVMnA4qkLi-WV5IndudqkleVCSjCcu1Mh2tCZ5gX-BC7CIIOPoi8qgzqemNrCR-XHwR45gcXa76cFeUgkfx6it9pfqLgmJ82U_lWeV-IP75-4knpSNtlCG0b0m7UhCoeyyw%3D)]
