@@ -1,0 +1,59 @@
+# Site info
+site_name: Kevork H | Developer Portfolio
+site_url: https://Kevork-nexacrawl-dev.github.io/my-portfolio/
+site_description: Professional portfolio showcasing my coding projects, technical playbooks, and system design expertise
+
+# Theme configuration
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - content.code.annotate
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: yellow
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: yellow
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+# Extra CSS for customization
+extra_css:
+  - stylesheets/extra.css
+
+# Extensions for enhanced markdown
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
+  - admonition
+  
+# Social links
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/kevork-nexacrawl-dev
